@@ -1,0 +1,152 @@
+.form {
+  max-width: 500px;
+  min-width: 400px;
+  margin: 0 auto;
+  padding: 40px;
+  border-radius: 40px;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  position: absolute;
+  left: 50%;
+  top: 46%;
+  transform: translate(-50%, -50%);
+  width: 75%;
+  height: 550px;
+  margin-top: 20px;
+  background: url(../../assets/Background2.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  border-radius: 20px;
+  overflow: hidden;
+  font-family: 'Playfair Display', serif;
+}
+
+.background {
+  background: url(../../assets/Background2.png) no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100vh;
+  width: 100%;
+  filter: blur(10px);
+}
+
+h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #da9bd5;
+
+  font-size: 250%;
+  font-family: 'Playfair Display', serif;
+}
+
+.form-group {
+  margin-bottom: 30px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+
+input[type="text"]:hover {
+  background-color: #3c163625;
+}
+
+input[type="password"]:hover {
+  background-color: #3c163625;
+}
+
+input[type="text"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  border: 2px solid #ccc;
+  border-bottom: 2px solid #ccc;
+  border-radius: 20px;
+  font-size: 16px;
+  border-bottom: 2px solid #bacfe6;
+  box-shadow: none;
+  background-color: #da9bd500;
+  color: #da9bd5;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+input::-webkit-input-placeholder {
+  color: #da9bd5;
+}
+
+button[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #db70d2;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button[type="submit"]:hover {
+  background-color: #da5fcf;
+}
+
+.form-group input.invalid {
+  border-color: #DD2C00;
+}
+
+input[type="radio"] {
+  display: none;
+  
+}
+
+input[type="radio"] + label {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  position: relative;
+  cursor: pointer;
+  padding-left: 25px;
+  color: #da9bd5;
+  font-size: 20px;
+  border-radius: 20%;
+}
+
+input[type="radio"] + label::before {
+  content: '';
+  display: inline-block;
+  width: 15px;
+  height: 15px;
+  border: 2px solid #ccc;
+  margin-right: 10px;
+  border-radius: 100%;
+  transition: border-color 0.3s ease-in-out, background-color 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked + label::before {
+  background-color: #da9bd5;
+  border-color: #da9bd5;
+}
+
+input[type="radio"] + label::after {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -2px;
+  left: 10;
+  width: 0%;
+  height: 3px;
+  background-color: #da9bd5;
+  transition: width 0.3s ease-in-out;
+}
+
+input[type="radio"]:checked + label::after {
+  width: 100%;
+}

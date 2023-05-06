@@ -1,0 +1,60 @@
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="data">
+        <ng-container *ngFor="let column of columns" [matColumnDef]="column.property">
+            <th mat-header-cell *matHeaderCellDef> {{column.name}} </th>
+            <td mat-cell *matCellDef="let product"> {{product[column.property]}} </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+
+    <mat-paginator [pageSizeOptions]="[5, 10, 20]" [pageSize]="pageSize" [length]="length" (page)="onPageChange($event)"
+        showFirstLastButtons aria-label="Select page of periodic elements">
+    </mat-paginator>
+</div>
+
+
+<!-- Cú pháp:
+<app-material [dataSource]="products" [columns]="tableColumns" [displayedColumns]="displayedColumns"></app-material>
+
+Dữ liệu mẫu:
+products = [
+    { id: 1, name: 'Product 1', price: 10 },
+    { id: 2, name: 'Product 2', price: 20 },
+    { id: 3, name: 'Product 3', price: 30 },
+    { id: 4, name: 'Product 4', price: 40 },
+    { id: 5, name: 'Product 5', price: 50 },
+    { id: 6, name: 'Product 6', price: 60 },
+    { id: 7, name: 'Product 7', price: 70 },
+    { id: 8, name: 'Product 8', price: 80 },
+    { id: 9, name: 'Product 9', price: 90 },
+    { id: 10, name: 'Product 10', price: 100 },
+    { id: 11, name: 'Product 11', price: 110 },
+    { id: 12, name: 'Product 12', price: 120 },
+    { id: 13, name: 'Product 13', price: 130 },
+    { id: 14, name: 'Product 14', price: 140 },
+    { id: 15, name: 'Product 15', price: 150 },
+    { id: 16, name: 'Product 16', price: 160 },
+    { id: 17, name: 'Product 17', price: 170 },
+    { id: 18, name: 'Product 18', price: 180 },
+    { id: 19, name: 'Product 19', price: 190 },
+    { id: 20, name: 'Product 20', price: 200 },
+    { id: 21, name: 'Product 21', price: 210 },
+    { id: 22, name: 'Product 22', price: 220 },
+    { id: 23, name: 'Product 23', price: 230 },
+    { id: 24, name: 'Product 24', price: 240 },
+    { id: 25, name: 'Product 25', price: 250 },
+    { id: 26, name: 'Product 26', price: 260 },
+    { id: 27, name: 'Product 27', price: 270 },
+    { id: 28, name: 'Product 28', price: 280 },
+    { id: 29, name: 'Product 29', price: 290 },
+    { id: 30, name: 'Product 30', price: 300 }
+  ];
+
+  displayedColumns = ['id', 'name', 'price'];
+  tableColumns = [
+    { name: 'ID', property: 'id' },
+    { name: 'Name', property: 'name' },
+    { name: 'Price', property: 'price' }
+  ]; -->

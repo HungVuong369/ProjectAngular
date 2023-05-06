@@ -1,0 +1,75 @@
+.container {
+    padding: 20px;
+    background: url(../../../assets/Background2.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+    height: 200vh;
+    width: 100%;
+    max-width: 2000px;
+}
+
+input[type="text"],
+button {
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+h2 {
+    margin-top: 60px;
+    font-family: Georgia, serif;
+    text-align: center;
+    color: #c570be;
+    font-size: 26px;
+}
+
+.autocomplete {
+    position: absolute;
+    z-index: 1;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.autocomplete > div {
+    padding: 5px;
+    cursor: pointer;
+}
+
+.autocomplete > div:hover {
+    background-color: #f2f2f2;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-control {
+    border-radius: 0;
+    border-color: #ccc;
+    background-color: #da9bd5;
+    color: #72366a;
+}
+
+.form-control:focus {
+    border-color: #c570be;
+    border-width: 2px;
+    box-shadow: none;
+    background-color: #da9bd5a6;
+    color: #72366a;
+}
+
+.btn-primary {
+    background-color: #8a4181;
+    border-color: #8b2f80;
+}
+
+.btn-primary:hover {
+    background-color: #c570be;
+    border-color: #c570be;
+}
+
+input:invalid {
+    border-color: #DD2C00;
+    border-width: 2px;
+}

@@ -1,0 +1,18 @@
+<app-header></app-header>
+
+<div class="container">
+    <h2>{{title}} {{filter}}</h2>
+    <form (ngSubmit)="save()">
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Tên" id="name" [(ngModel)]="formData.name" name="name" required>>
+        </div>
+        <div class="form-group">
+            <input type="text" class="form-control" placeholder="Địa chỉ" id="address" [(ngModel)]="formData.address" name="address" required>>
+        </div>
+        <div class="form-group">
+            <input type="number" class="form-control" placeholder="Số điện thoại" id="phone" [(ngModel)]="formData.phone" name="phone" required>
+        </div>
+        <button type="submit" class="btn btn-primary" [disabled]="!isFormValid()">{{buttonLabel}}</button>
+        <button type="button" class="btn btn-primary" (click)="clear()">Khôi phục</button>
+    </form>
+</div>
